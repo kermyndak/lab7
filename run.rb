@@ -24,11 +24,15 @@ when 1
 when 2
   puts 'Input a number for triangle coordinates'
   vals = []
-  6.times do
-    vals << gets.chomp.to_f
+  3.times do
+    temp = gets.chomp.split.map(&:to_f)
+    vals << temp[0]
+    vals << temp[1]
   end
   tr = Triangle.new(vals)
   puts tr.square
+  trtr = Prizma.new(vals, 50)
+  puts trtr.square
 else
   p 'Bad input, exit...'
 end
