@@ -14,5 +14,13 @@ RSpec.describe Prizma do
     it 'Check classes' do
       expect(prizma.class.superclass).to eq(Triangle)
     end
+
+    it 'Check classes 2' do
+      expect(prizma.is_a?(Triangle)).to be true
+    end
+
+    it 'Check classes 3' do
+      expect(prizma.class < Triangle).to be true
+    end
   end
 end
